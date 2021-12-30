@@ -37,6 +37,17 @@ async function response(links, thumbnail, tweet) {
             console.log(data);
         }
     );
+
+    var after_response = {
+        status: `Se tiver algum problema com o novo site, apague seu tweet e me marque de novo, assim o robó conseguirá fazer o download novamente e resolver o erro.`,
+        in_reply_to_status_id: '' + tweet.id_str
+    };
+
+    client.post('statuses/update', after_response,
+        function(err, data, response) {
+            console.log(data);
+        }
+    );
 }
 
 module.exports = response
