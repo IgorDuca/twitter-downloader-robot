@@ -39,7 +39,7 @@ async function response(links, thumbnail, tweet) {
     );
 
     var after_response = {
-        status: `@${tweet.user.screen_name}, caso tenha algum problema com o novo site, apague seu tweet e me marque de novo para resolver o erro.`,
+        status: `@${tweet.user.screen_name} Caso tenha algum problema com o novo site, apague seu tweet e me marque de novo, assim o robó conseguirá fazer o download novamente e resolver o erro.`,
         in_reply_to_status_id: '' + tweet.id_str
     };
 
