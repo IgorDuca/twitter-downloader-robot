@@ -22,7 +22,7 @@ function manager(tweet) {
             else return downloadSelector(true, tweet);
         } else {
             var res = {
-                status: `Oi, @${tweet.user.screen_name}, você precisa me seguir pra eu te ajudar, então me siga, apague esse tweet e me marque na publicação novamente 😁`,
+                status: `Oi, @${tweet.user.screen_name}, você precisa me seguir pra baixar seu vídeo, então me siga, apague esse tweet e me marque na publicação novamente 😁`,
                 in_reply_to_status_id: '' + tweet.id_str
             };
         
