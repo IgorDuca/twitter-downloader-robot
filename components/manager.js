@@ -38,7 +38,7 @@ function manager(tweet) {
 async function downloadSelector(twitter, tweet) {
     var video_thumb = tweet.user.profile_image_url;
     if(twitter == false) {
-        var link = tweet.text.split(`@${tokens.USERNAME}`)[1];
+        var link = tweet.text.split(`@${process.env.USERNAME}`)[1];
         await downloader(link, video_thumb, tweet);
     } else {
         var link = `https://twitter.com/${tweet.in_reply_to_screen_name}/status/${tweet.in_reply_to_status_id_str}`;
