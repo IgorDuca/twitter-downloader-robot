@@ -20,7 +20,7 @@ var stream = client.stream('statuses/filter', { track: [`@${process.env.USERNAME
 stream.on('tweet', newTweet);
 
 async function newTweet(tweet) {
-    if(tweet.in_reply_to_status_id_str != null && tweet.in_reply_to_user_id_str == process.env.BOTID) return console.log("Ignoring tweet from a bot..."); // Ignores all types of tweets that becomes from the client bot
+    if(tweet.in_reply_to_status_id_str != null && tweet.in_reply_to_user_id_str == process.env.BOTID) return console.log("Ignoring tweet from a bot..."); // Ignora todos os tweets provenientes de um bot
     
     manager(tweet)
 }
